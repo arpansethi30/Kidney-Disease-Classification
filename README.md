@@ -24,11 +24,11 @@ https://github.com/arpansethi30/Kidney-Disease-Classification
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n cnncls python=3.8 -y
+conda create -n kidney python=3.8 -y
 ```
 
 ```bash
-conda activate cnncls
+conda activate kidney
 ```
 
 
