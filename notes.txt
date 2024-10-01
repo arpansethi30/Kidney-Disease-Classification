@@ -1,0 +1,1 @@
+Change epochs in params.yamls to 500
