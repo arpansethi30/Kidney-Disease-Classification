@@ -1,5 +1,4 @@
 tensorflow
-tensorflow-metal
 pandas 
 dvc
 mlflow==2.2.2

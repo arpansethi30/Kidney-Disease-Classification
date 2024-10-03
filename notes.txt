@@ -1,1 +1,2 @@
 Change epochs in params.yamls to 500
+tensorflow==2.12.0
