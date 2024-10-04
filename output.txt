@@ -1,0 +1,85 @@
+.
+├── ./LICENSE
+├── ./README.md
+├── ./config
+│   └── ./config/config.yaml
+├── ./dvc.yaml
+├── ./logs
+│   └── ./logs/running_logs.log
+├── ./main.py
+├── ./notes.txt
+├── ./output.txt
+├── ./params.yaml
+├── ./requirements.txt
+├── ./research
+│   ├── ./research/01_data_ingestion.ipynb
+│   ├── ./research/02_prepare_base_model.ipynb
+│   ├── ./research/03_model_training.ipynb
+│   ├── ./research/04_model_eval.ipynb
+│   ├── ./research/04_model_evaluation.ipynb
+│   ├── ./research/logs
+│   │   └── ./research/logs/running_logs.log
+│   └── ./research/trials.ipynb
+├── ./scores.json
+├── ./setup.py
+├── ./src
+│   ├── ./src/cnnClassifier
+│   │   ├── ./src/cnnClassifier/__init__.py
+│   │   ├── ./src/cnnClassifier/__pycache__
+│   │   │   └── ./src/cnnClassifier/__pycache__/__init__.cpython-38.pyc
+│   │   ├── ./src/cnnClassifier/components
+│   │   │   ├── ./src/cnnClassifier/components/__init__.py
+│   │   │   ├── ./src/cnnClassifier/components/__pycache__
+│   │   │   │   ├── ./src/cnnClassifier/components/__pycache__/__init__.cpython-38.pyc
+│   │   │   │   ├── ./src/cnnClassifier/components/__pycache__/data_ingestion.cpython-38.pyc
+│   │   │   │   ├── ./src/cnnClassifier/components/__pycache__/model_evaluation_mlflow.cpython-38.pyc
+│   │   │   │   ├── ./src/cnnClassifier/components/__pycache__/model_training.cpython-38.pyc
+│   │   │   │   └── ./src/cnnClassifier/components/__pycache__/prepare_base_model.cpython-38.pyc
+│   │   │   ├── ./src/cnnClassifier/components/data_ingestion.py
+│   │   │   ├── ./src/cnnClassifier/components/model_evaluation_mlflow.py
+│   │   │   ├── ./src/cnnClassifier/components/model_training.py
+│   │   │   └── ./src/cnnClassifier/components/prepare_base_model.py
+│   │   ├── ./src/cnnClassifier/config
+│   │   │   ├── ./src/cnnClassifier/config/__init__.py
+│   │   │   ├── ./src/cnnClassifier/config/__pycache__
+│   │   │   │   ├── ./src/cnnClassifier/config/__pycache__/__init__.cpython-38.pyc
+│   │   │   │   └── ./src/cnnClassifier/config/__pycache__/configuration.cpython-38.pyc
+│   │   │   └── ./src/cnnClassifier/config/configuration.py
+│   │   ├── ./src/cnnClassifier/constants
+│   │   │   ├── ./src/cnnClassifier/constants/__init__.py
+│   │   │   └── ./src/cnnClassifier/constants/__pycache__
+│   │   │       └── ./src/cnnClassifier/constants/__pycache__/__init__.cpython-38.pyc
+│   │   ├── ./src/cnnClassifier/entity
+│   │   │   ├── ./src/cnnClassifier/entity/__init__.py
+│   │   │   ├── ./src/cnnClassifier/entity/__pycache__
+│   │   │   │   ├── ./src/cnnClassifier/entity/__pycache__/__init__.cpython-38.pyc
+│   │   │   │   └── ./src/cnnClassifier/entity/__pycache__/config_entity.cpython-38.pyc
+│   │   │   └── ./src/cnnClassifier/entity/config_entity.py
+│   │   ├── ./src/cnnClassifier/pipeline
+│   │   │   ├── ./src/cnnClassifier/pipeline/__init__.py
+│   │   │   ├── ./src/cnnClassifier/pipeline/__pycache__
+│   │   │   │   ├── ./src/cnnClassifier/pipeline/__pycache__/__init__.cpython-38.pyc
+│   │   │   │   ├── ./src/cnnClassifier/pipeline/__pycache__/stage_01_data_ingestion.cpython-38.pyc
+│   │   │   │   ├── ./src/cnnClassifier/pipeline/__pycache__/stage_02_prepare_base_model.cpython-38.pyc
+│   │   │   │   ├── ./src/cnnClassifier/pipeline/__pycache__/stage_03_model_training.cpython-38.pyc
+│   │   │   │   └── ./src/cnnClassifier/pipeline/__pycache__/stage_04_model_evaluation.cpython-38.pyc
+│   │   │   ├── ./src/cnnClassifier/pipeline/stage_01_data_ingestion.py
+│   │   │   ├── ./src/cnnClassifier/pipeline/stage_02_prepare_base_model.py
+│   │   │   ├── ./src/cnnClassifier/pipeline/stage_03_model_training.py
+│   │   │   └── ./src/cnnClassifier/pipeline/stage_04_model_evaluation.py
+│   │   └── ./src/cnnClassifier/utils
+│   │       ├── ./src/cnnClassifier/utils/__init__.py
+│   │       ├── ./src/cnnClassifier/utils/__pycache__
+│   │       │   ├── ./src/cnnClassifier/utils/__pycache__/__init__.cpython-38.pyc
+│   │       │   └── ./src/cnnClassifier/utils/__pycache__/common.cpython-38.pyc
+│   │       └── ./src/cnnClassifier/utils/common.py
+│   └── ./src/cnnClassifier.egg-info
+│       ├── ./src/cnnClassifier.egg-info/PKG-INFO
+│       ├── ./src/cnnClassifier.egg-info/SOURCES.txt
+│       ├── ./src/cnnClassifier.egg-info/dependency_links.txt
+│       └── ./src/cnnClassifier.egg-info/top_level.txt
+├── ./template.py
+└── ./templates
+    └── ./templates/index.html
+
+22 directories, 61 files
