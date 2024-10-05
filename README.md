@@ -1,181 +1,150 @@
-# Kidney-Disease-Classification
-
-## Workflows
-
-1. Update config.yaml
-2. Update secrets.yaml [Optional]
-3. Update params.yaml
-4. Update the entity
-5. Update the configuration manager in src config
-6. Update the components
-7. Update the pipeline 
-8. Update the main.py
-9. Update the dvc.yaml
-10. app.py
-
-# How to run?
-### STEPS:
-
-Clone the repository
-
-```bash
-https://github.com/arpansethi30/Kidney-Disease-Classification
-```
-### STEP 01- Create a conda environment after opening the repository
-
-```bash
-conda create -n kidney python=3.8 -y
-```
-
-```bash
-conda activate kidney
-```
+# 🔬 Kidney Tumor Classification ML Project
 
 
-### STEP 02- install the requirements
-```bash
-pip install -r requirements.txt
-```
+## 📌 Table of Contents
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [MLflow Integration](#mlflow-integration)
+- [DVC (Data Version Control)](#dvc-data-version-control)
+- [AWS Deployment](#aws-deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-# Finally run the following command
-python app.py
-```
+## 🔍 Project Overview
 
-Now,
-```bash
-open up you local host and port
-```
+This cutting-edge machine learning project focuses on the critical task of kidney tumor classification. Leveraging state-of-the-art deep learning techniques, our model analyzes medical imaging data to accurately classify kidney tumors, potentially aiding in early detection and diagnosis.
 
+### 🎯 Objective
+To develop a robust, scalable, and accurate machine learning model for classifying kidney tumors, deployable in real-world medical settings.
 
+### 💡 Key Features
 
+- **High Accuracy**: Utilizes advanced CNN architectures for precise tumor classification.
+- **End-to-End Solution**: From data preprocessing to model deployment, all in one package.
+- **Scalability**: Designed to handle large datasets efficiently.
+- **MLflow Integration**: For comprehensive experiment tracking and model versioning.
+- **DVC Pipeline**: Ensures reproducibility and efficient data/model versioning.
+- **Containerized Deployment**: Docker-based deployment for consistency across environments.
+- **Cloud-Ready**: Seamless deployment on AWS infrastructure.
 
+## 🛠 Tech Stack
 
+- **Python 3.8**
+- **TensorFlow/Keras**: For building and training the deep learning model
+- **MLflow**: Experiment tracking and model management
+- **DVC**: Data and pipeline versioning
+- **Docker**: Containerization
+- **AWS**: Cloud deployment (EC2, ECR)
+- **GitHub Actions**: CI/CD pipeline
 
-## MLflow
-
-- [Documentation](https://mlflow.org/docs/latest/index.html)
-
-- [MLflow tutorial](https://youtu.be/qdcHHrsXA48?si=bD5vDS60akNphkem)
-
-##### cmd
-- mlflow ui
-
-### dagshub
-[dagshub](https://dagshub.com/)
-
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
-MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
-python script.py
-
-Run this to export as env variables:
-
-```bash
-
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/Kidney-Disease-Classification-MLflow-DVC.mlflow
-
-export MLFLOW_TRACKING_USERNAME=entbappy 
-
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+## 📂 Project Structure
 
 ```
+kidney-tumor-classification/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+├── models/
+├── notebooks/
+├── src/
+│   ├── data_processing/
+│   ├── model/
+│   ├── training/
+│   └── evaluation/
+├── tests/
+├── config/
+├── .github/workflows/
+├── Dockerfile
+├── requirements.txt
+├── setup.py
+└── README.md
+```
 
+## 🚀 Getting Started
 
-### DVC cmd
+### Prerequisites
+- Python 3.8
+- Conda
 
-1. dvc init
-2. dvc repro
-3. dvc dag
+### Installation
 
+1. Clone the repository:
+   ```bash
+   [git clone https://github.com/arpansethi30/Kidney-Disease-Classification.git
+   cd Kidney-Disease-Classification
+   ```
 
-## About MLflow & DVC
+2. Create and activate a conda environment:
+   ```bash
+   conda create -n kidney-tumor python=3.8 -y
+   conda activate kidney-tumor
+   ```
 
-MLflow
+3. Install the requirements:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
- - Its Production Grade
- - Trace all of your expriements
- - Logging & taging your model
+### Running the Application
 
+```bash
+python main.py
+```
 
-DVC 
+## 📊 MLflow Integration
 
- - Its very lite weight for POC only
- - lite weight expriements tracker
- - It can perform Orchestration (Creating Pipelines)
+We use MLflow for comprehensive experiment tracking and model management.
 
+To view the MLflow UI:
+```bash
+mlflow ui
+```
 
+Set up DagsHub for remote tracking:
+```bash
+export MLFLOW_TRACKING_URI=https://dagshub.com/your-username/kidney-tumor-classification.mlflow
+export MLFLOW_TRACKING_USERNAME=your-username
+export MLFLOW_TRACKING_PASSWORD=your-token
+```
 
-# AWS-CICD-Deployment-with-Github-Actions
+## 🔄 DVC (Data Version Control)
 
-## 1. Login to AWS console.
+DVC is used for efficient data and pipeline versioning.
 
-## 2. Create IAM user for deployment
+Key commands:
+- `dvc init`: Initialize DVC in your project
+- `dvc repro`: Reproduce the entire pipeline
+- `dvc dag`: View the pipeline structure
 
-	#with specific access
+## ☁️ AWS Deployment
 
-	1. EC2 access : It is virtual machine
+Our project is deployed on AWS using GitHub Actions for CI/CD.
 
-	2. ECR: Elastic Container registry to save your docker image in aws
+### Setup Steps:
+1. Create an IAM user with EC2 and ECR access
+2. Set up an ECR repository
+3. Launch and configure an EC2 instance
+4. Set up GitHub Secrets:
+   - AWS_ACCESS_KEY_ID
+   - AWS_SECRET_ACCESS_KEY
+   - AWS_REGION
+   - AWS_ECR_LOGIN_URI
+   - ECR_REPOSITORY_NAME
 
+## 🤝 Contributing
 
-	#Description: About the deployment
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
-	1. Build docker image of the source code
+## 📄 License
 
-	2. Push your docker image to ECR
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-	3. Launch Your EC2 
+---
 
-	4. Pull Your image from ECR in EC2
-
-	5. Lauch your docker image in EC2
-
-	#Policy:
-
-	1. AmazonEC2ContainerRegistryFullAccess
-
-	2. AmazonEC2FullAccess
-
-	
-## 3. Create ECR repo to store/save docker image
-    - Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/chicken
-
-	
-## 4. Create EC2 machine (Ubuntu) 
-
-## 5. Open EC2 and Install docker in EC2 Machine:
-	
-	
-	#optinal
-
-	sudo apt-get update -y
-
-	sudo apt-get upgrade
-	
-	#required
-
-	curl -fsSL https://get.docker.com -o get-docker.sh
-
-	sudo sh get-docker.sh
-
-	sudo usermod -aG docker ubuntu
-
-	newgrp docker
-	
-# 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
-
-
-# 7. Setup github secrets:
-
-    AWS_ACCESS_KEY_ID=
-
-    AWS_SECRET_ACCESS_KEY=
-
-    AWS_REGION = us-east-1
-
-    AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
-
-    ECR_REPOSITORY_NAME = simple-app
-
+<p align="center">
+  Made with ❤️ by Arpan.
+</p>
