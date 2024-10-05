@@ -1,2 +1,5 @@
 Change epochs in params.yamls to 500
 tensorflow==2.12.0
+
+AWS 
+992382709333.dkr.ecr.ap-southeast-2.amazonaws.com/kidney
